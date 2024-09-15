@@ -1,0 +1,7 @@
+{
+  "name": "review_edificios",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
