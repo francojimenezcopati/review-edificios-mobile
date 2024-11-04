@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+        <ion-title
+            >Imágenes {{this.type === 'ugly' ? 'feas': 'lindas'}}</ion-title
+        >
+    </ion-toolbar>
+</ion-header>
+
+<div
+    class="flex flex-col h-screen 
+        {{ this.type === 'ugly' ? 'bg-gradient-to-b from-[#ffa7a7] to-[#fa7373]' : 'bg-gradient-to-b from-[#c0ffc5] to-[#01a342]' }}"
+>
+    <div class="flex py-4 justify-center">
+        <div
+            class="bg-white flex space-x-5 justify-between rounded-lg shadow-lg p-4 mx-8 w-full"
+        >
+            <ion-button class="w-full" (click)="captureAndUpload()"
+                >Subir foto</ion-button
+            >
+            <ion-button class="w-full" routerLink="/graphic"
+                >Ver gráfico</ion-button
+            >
+        </div>
+    </div>
+    <div class="flex-1 flex flex-col mx-auto w-full h-5/6 px-4 pb-6">
+        <div class="flex flex-col justify-between overflow-y-scroll pt-4 mb-5">
+            @for(image of this.images;track $index){
+
+            <app-image-card
+                [image]="image"
+                [unvote]="unvote"
+                [vote]="vote"
+            ></app-image-card>
+
+            }
+        </div>
+    </div>
+</div>

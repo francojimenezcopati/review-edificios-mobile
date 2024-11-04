@@ -1,0 +1,36 @@
+<div class="flex flex-col p-4 pt-0">
+    <div class="border-gray-300 border-4 border-b-0">
+        <img [src]="image.url" alt="failed" />
+    </div>
+    <div class="flex justify-between items-center bg-gray-800 p-2 space-x-2">
+        <div class="flex justify-center items-center">
+            @if(image.usersVoted &&
+            image.usersVoted.includes(this.authService.currentUserSig()?.uid!)){
+            <ion-button (click)="unvote(image.id)">
+                <ion-icon
+                    slot="icon-only"
+                    [name]="this.type === 'ugly' ? 'thumbs-down' : 'heart'"
+                ></ion-icon>
+            </ion-button>
+            }@else{
+            <ion-button (click)="vote(image.id)">
+                <ion-icon
+                    slot="icon-only"
+                    [name]="this.type === 'ugly' ? 'thumbs-down-outline' : 'heart-outline'"
+                ></ion-icon>
+            </ion-button>
+            }
+            <span class="text-slate-200">{{ image.votes }}</span>
+        </div>
+
+        <span class="text-slate-200">
+            {{ "@" + image.username }}
+        </span>
+
+        <span class="text-slate-200">
+            {{ image.createdAt.getDate() }}/{{
+                image.createdAt.getMonth() + 1
+            }}/{{ image.createdAt.getFullYear() }}
+        </span>
+    </div>
+</div>

@@ -1,0 +1,273 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: auto;
+    overflow: hidden;
+    margin: 0;
+
+    background-color: #000000;
+    z-index: -20;
+}
+
+.building {
+  position: absolute;
+  bottom: 0;
+  background-color: #413d3d; /* Color grisáceo para los edificios */
+  border-radius: 2px;
+  opacity: 0.6;
+
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+
+.building-1 {
+  width: 120px;  /* 60 * 2 */
+  height: 630px; /* 180 * 3.5 */
+  left: -2%;
+}
+
+.building-2 {
+  width: 160px;  /* 80 * 2 */
+  height: 770px; /* 220 * 3.5 */
+  left: 20%;
+}
+
+.building-3 {
+  width: 100px;  /* 50 * 2 */
+  height: 525px; /* 150 * 3.5 */
+  left: 45%;
+}
+
+.building-4 {
+  width: 140px;  /* 70 * 2 */
+  height: 700px; /* 200 * 3.5 */
+  left: 65%;
+}
+
+.splash-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+
+
+}
+
+
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Make container take full height */
+}
+
+.splash-name {
+    margin-bottom: 70px;
+    opacity: 0;
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.splash-logo {
+    opacity: 0;
+}
+
+.splash-logo img {
+    width: 240px; /* Adjust logo size */
+    height: auto;
+}
+
+.splash-division {
+    font-size: 2.25em;
+    margin-bottom: 70px;
+    opacity: 0;
+}
+
+/* Light mode styles */
+@media (prefers-color-scheme: light) {
+    .splash-screen {
+        background-color: white;
+    }
+
+    .splash-name span:first-child, /* Style "by" */
+    .splash-division {
+        color: #000000; /* Text color for light mode */
+    }
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    .splash-screen {
+        background-color: #000000;
+    }
+
+    .splash-name span:first-child, /* Style "by" */
+    .splash-division {
+        color: white; /* Text color for dark mode */
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.6;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+#logo {
+    width: 400px;
+    animation: fill-animation 0.5s ease forwards 3.8s;
+}
+
+#logo path:nth-child(1) {
+    stroke-dasharray: 115.49966430664062;
+    stroke-dashoffset: 115.49966430664062;
+    animation: line-animation 1.6s ease forwards 2.4s;
+}
+
+#logo path:nth-child(2) {
+    stroke-dasharray: 131.953125;
+    stroke-dashoffset: 131.953125;
+    animation: line-animation 1.6s ease forwards 2.2s;
+}
+
+#logo path:nth-child(3) {
+    stroke-dasharray: 119.8808364868164;
+    stroke-dashoffset: 119.8808364868164;
+    animation: line-animation 1.6s ease forwards 2s;
+}
+
+#logo path:nth-child(4) {
+    stroke-dasharray: 131.95091247558594;
+    stroke-dashoffset: 131.95091247558594;
+    animation: line-animation 1.6s ease forwards 1.8s;
+}
+
+#logo path:nth-child(5) {
+    stroke-dasharray: 180.35214233398438;
+    stroke-dashoffset: 180.35214233398438;
+    animation: line-animation 1.6s ease forwards 1.6s;
+}
+
+#logo path:nth-child(6) {
+    stroke-dasharray: 79.27583312988281;
+    stroke-dashoffset: 79.27583312988281;
+    animation: line-animation 1.6s ease forwards 1.4s;
+}
+
+#logo path:nth-child(7) {
+    stroke-dasharray: 97.92566680908203;
+    stroke-dashoffset: 97.92566680908203;
+    animation: line-animation 1.6s ease forwards 1.2s;
+}
+
+#logo path:nth-child(8) {
+    stroke-dasharray: 114.93817138671875;
+    stroke-dashoffset: 114.93817138671875;
+    animation: line-animation 1.6s ease forwards 1s;
+}
+
+#logo path:nth-child(9) {
+    stroke-dasharray: 110.07930755615234;
+    stroke-dashoffset: 110.07930755615234;
+    animation: line-animation 1.6s ease forwards 0.8s;
+}
+
+#logo path:nth-child(10) {
+    stroke-dasharray: 119.88009643554688;
+    stroke-dashoffset: 119.88009643554688;
+    animation: line-animation 1.6s ease forwards 0.6s;
+}
+
+#logo path:nth-child(11) {
+    stroke-dasharray: 128.89247131347656;
+    stroke-dashoffset: 128.89247131347656;
+    animation: line-animation 1.6s ease forwards 0.4s;
+}
+
+#logo path:nth-child(12) {
+    stroke-dasharray: 76.32150268554688;
+    stroke-dashoffset: 76.32150268554688;
+    animation: line-animation 1.6s ease forwards 0.2s;
+}
+
+#logo path:nth-child(13) {
+    stroke-dasharray: 126.29542541503906;
+    stroke-dashoffset: 126.29542541503906;
+    animation: line-animation 1.6s ease forwards;
+}
+
+@keyframes line-animation {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill-animation {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: #ff3131;
+    }
+}
+
+
+
+.splash-name {
+    animation: fadeInAndMoveUp 1.5s ease-in-out forwards;
+}
+
+.splash-logo {
+    animation: fadeInAndMoveUp 1.5s ease-in-out forwards 0.5s;
+}
+
+.splash-division {
+    animation: fadeInAndMoveUp 1.5s ease-in-out forwards 1s;
+}
+
+@keyframes fadeInAndMoveUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

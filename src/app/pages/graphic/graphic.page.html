@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button
+                defaultHref="/images/{{this.type}}"
+            ></ion-back-button>
+        </ion-buttons>
+        <ion-title>Gráfico</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<div class="flex flex-col h-full bg-gray-50 p-4">
+    <div class="mb-6">
+        <h1 class="text-2xl font-bold text-center text-gray-800">
+            Gráfico de las {{ this.type === 'ugly' ? 'peores' : 'mejores' }}
+            cosas del edificio
+        </h1>
+        <p class="text-center text-gray-600 mt-2">
+            Aquí puedes visualizar la comparación de los datos de forma clara y
+            sencilla.
+        </p>
+    </div>
+    <div
+        class="flex justify-center items-center bg-white rounded-lg shadow-md p-4 border border-gray-200"
+    >
+        <canvas baseChart id="graphic" class="w-full h-64"></canvas>
+    </div>
+</div>

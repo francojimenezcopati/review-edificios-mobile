@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>Relevamiento Visual</ion-title>
+        <ion-button
+            slot="end"
+            class="mr-2"
+            color="danger"
+            (click)="this.logout()"
+        >
+            <img src="/assets/LogoutIcon.svg" class="w-6 h-auto" alt="" />
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<div class="flex flex-col justify-center items-center h-full m-3">
+    <ion-button
+        id="nice"
+        strong="true"
+        class="flex flex-col text-5xl w-full h-full"
+        (click)="onBtnClick('nice')"
+    >
+        <img
+            class="fixed opacity-30 -z-10"
+            src="/assets/nice-things.jpg"
+            alt=""
+        />
+        <span class="w-full">Cosas Lindas</span>
+    </ion-button>
+    <ion-button
+        id="ugly"
+        strong="true"
+        class="flex flex-col text-5xl w-full h-full"
+        (click)="onBtnClick('ugly')"
+    >
+        <img
+            class="fixed opacity-30 -z-10"
+            src="/assets/ugly-things.jpg"
+            alt=""
+        />
+        <span class="w-full">Cosas Feas</span>
+    </ion-button>
+</div>
